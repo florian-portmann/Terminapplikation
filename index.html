@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terminplaner</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Terminplaner</h1>
+    <div id="filter-options">
+      <label><input type="checkbox" id="filter-meeting" class="filter-checkbox" checked> Meeting</label>
+      <label><input type="checkbox" id="filter-deadline" class="filter-checkbox" checked> Arbeitsabgabe</label>
+      <label><input type="checkbox" id="filter-appointment" class="filter-checkbox" checked> Termin</label>
+      <label><input type="checkbox" id="filter-reminder" class="filter-checkbox" checked> Erinnerung</label>
+    </div>
+    <button id="new-event-btn">+</button>
+    <button id="save-event-btn">Events als JSON speichern</button>
+    <div>
+      <h2>JSON Datei hochladen</h2>
+      <input type="file" id="upload-json" accept=".json">
+    </div>
+  </header>
+
+  <div class="calendar">
+  </div>
+
+  <div id="new-event-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Neuer Termin</h2>
+      <label for="category">Kategorie:</label>
+      <select id="category">
+        <option value="meeting">Meeting</option>
+        <option value="deadline">Arbeitsabgabe</option>
+        <option value="appointment">Termin</option>
+        <option value="reminder">Erinnerung</option>
+      </select>
+      <label for="priority">Priorität:</label>
+      <select id="priority">
+        <option value="low">Nicht wichtig</option>
+        <option value="medium">Normal</option>
+        <option value="high">Wichtig</option>
+        <option value="urgent">Sehr wichtig</option>
+      </select>
+      <label for="event-title">Titel:</label>
+      <input type="text" id="event-title">
+      <label for="event-description">Beschreibung:</label>
+      <textarea id="event-description"></textarea>
+      <label for="event-date">Datum:</label>
+      <input type="date" id="event-date">
+      <label for="event-time">Uhrzeit:</label>
+      <input type="time" id="event-time">
+      <button id="create-event-btn">Erstellen</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

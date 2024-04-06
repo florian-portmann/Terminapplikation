@@ -1,0 +1,199 @@
+body {
+  background-color: #222; 
+  color: #fff; 
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+#filter-options {
+  display: flex;
+  align-items: center;
+}
+
+.meeting, .deadline, .appointment, .reminder {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.meeting:hover, .deadline:hover, .appointment:hover, .reminder:hover {
+  opacity: 0.8;
+}
+
+.meeting:focus, .deadline:focus, .appointment:focus, .reminder:focus {
+  outline: none;
+}
+
+#new-event-btn, #save-event-btn, #upload-json {
+  border: none;
+  background-color: #ffcc00;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#new-event-btn:hover, #save-event-btn:hover, #upload-json:hover {
+  background-color: #ffdb4d;
+  color: #333;
+}
+
+#new-event-btn:focus, #save-event-btn:focus, #upload-json:focus {
+  outline: none;
+}
+
+#new-event-btn:active, #save-event-btn:active, #upload-json:active {
+  background-color: #ffd633;
+  color: #333;
+}
+
+.calendar { 
+  padding: 20px;
+}
+
+.event {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.event-info {
+  border-radius: 8px;
+}
+
+.event h3 {
+  margin-top: 0;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  overflow: auto;
+}
+
+.modal-content {
+  background-color: #333;
+  color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 500px;
+}
+
+.close {
+  color: #fff;
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.close:hover, .close:focus {
+  color: #ddd;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #444;
+  color: #fff;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  background-color: #555;
+}
+
+#create-event-btn {
+  background-color: #ffcc00;
+  color: #333;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#create-event-btn:hover {
+  background-color: #ffd633;
+  color: #333;
+}
+
+#create-event-btn:focus {
+  outline: none;
+}
+
+.event {
+  position: relative; 
+}
+
+.buttons-container {
+  position: absolute; 
+  top: 0; 
+  right: 0; 
+}
+
+.buttons-container button,
+.buttons-container img {
+  margin-left: 5px;
+}
+
+.meeting {
+  background-color: hsla(0, 100%, 50%, 0.5);
+  border: 4px solid hsla(0, 100%, 50%);
+}
+
+.deadline {
+  background-color: hsla(120, 100%, 51%, 0.5);
+  border: 4px solid hsla(120, 100%, 51%);
+}
+
+.appointment {
+  background-color: hsla(241, 100%, 51%, 0.5);
+  border: 4px solid hsla(241, 100%, 51%);
+}
+
+.reminder {
+  background-color: hsla(298, 100%, 50%, 0.5);
+  border: 4px solid hsla(298, 100%, 50%);
+}
